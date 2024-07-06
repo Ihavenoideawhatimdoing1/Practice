@@ -42,11 +42,8 @@ for location in location_title_tags:
         .removesuffix(', AP\n      ')
         .removesuffix(', AE\n      ')
         )
-    
-
-date_title_tags = soup.find_all(class_='is-small has-text-grey')
-
 #Finding the dates and cleaning the results
+date_title_tags = soup.find_all(class_='is-small has-text-grey')
 for date in date_title_tags:
     date_titles.append(
         date.text.upper()
